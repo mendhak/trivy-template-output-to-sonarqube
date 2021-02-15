@@ -63,4 +63,4 @@ I can't find a way to add more details in the Generic Issue Import JSON format.
 
 RuleID is hardcoded to ContainerScanning.  What should it be instead?
 
-I couldn't pick where to put the 'fixed' version in.  
+I couldn't find a good place to put the 'fixed' version in.  The message field is already crowded. 

@@ -65,4 +65,5 @@ I can't find a way to add more details in the Generic Issue Import JSON format. 
 
 ![no details](screenshots/screenshot2.png)
 
-I've also posted [on the Sonarsource Community forum](https://community.sonarsource.com/t/how-can-i-fill-up-the-bottom-details-panel-when-importing-issues-using-the-generic-issue-import-format/38627).  
+I've also posted [a feature request on the Sonarsource Community forum](https://community.sonarsource.com/t/add-the-ability-to-populate-the-rules-details-panel-when-using-the-generic-issue-import-format/38702).  
+

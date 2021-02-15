@@ -20,7 +20,7 @@ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
                 --format template --template "@contrib/html.tpl" -o /output/report.html \
                 mendhak/http-https-echo:15
 ```
-
+A `report.html` appears in trivy-output.  
 
 Now create a **custom Sonarqube JSON output**, using the custom.tpl as a template:
 
@@ -35,6 +35,8 @@ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
                 mendhak/http-https-echo:15
 ```
 
+A `report.json` appears in trivy-output. 
+
 Finally, **send the generated report.json** to Sonarqube using Sonar Scanner CLI:
 
 ```
@@ -45,7 +47,7 @@ docker run --rm \
            -Dsonar.projectKey=test \
            -Dsonar.externalIssuesReportPaths=/usr/src/trivy-output/report.json 
 ```
-
+Go to the Sonarqube test project and look for the vulnerabilities there. 
 
 ### Screenshot
 

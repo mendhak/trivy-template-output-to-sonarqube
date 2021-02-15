@@ -12,7 +12,7 @@
     {{- end }}
     {
       "engineId": "TRIVY",
-      "ruleId": "rule2",
+      "ruleId": "ContainerScanning",
       "severity": {{ if eq .Severity "UNKNOWN" -}}
                     "INFO"
                   {{- else if eq .Severity "LOW" -}}

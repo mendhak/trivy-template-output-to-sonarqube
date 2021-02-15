@@ -52,3 +52,8 @@ Go to the Sonarqube test project and look for the vulnerabilities there.
 ### Screenshot
 
 ![img](screenshot.png)
+
+### Notes
+
+I can't find a way to add more details in the Generic Issue Import JSON format.  
+

@@ -26,7 +26,6 @@
                   {{-  else -}}
                     "INFO"
                   {{- end }},
-      {{- /* TODO: Define confidence */}}
       "type": "VULNERABILITY",
       "primaryLocation": {
         "message": "{{ .PkgName }} - {{ .VulnerabilityID }} - {{ .Title }}",

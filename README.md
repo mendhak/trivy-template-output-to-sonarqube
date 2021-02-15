@@ -1,6 +1,6 @@
 ### What is this
 
-A custom template that Trivy can use, to generate a Sonarqube friendly output.  It uses [Sonarqube Generic Issue Import Format](https://docs.sonarqube.org/latest/analysis/generic-issue/). 
+A [custom template](sonarqube.tpl) that Trivy can use, to generate a Sonarqube friendly output.  It uses [Sonarqube Generic Issue Import Format](https://docs.sonarqube.org/latest/analysis/generic-issue/). 
 
 ### Instructions
 
@@ -24,15 +24,15 @@ A `report.html` appears in trivy-output.  You can use this for comparison purpos
 
 ### Create a custom Sonarqube JSON output
 
-This step will use the custom.tpl as a template:
+This step will use the sonarqube.tpl as a template:
 
 ```
 docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
                 -v ${PWD}/trivy-cache/:/root/.cache/ \
-                -v ${PWD}/custom.tpl:/input/custom.tpl \
+                -v ${PWD}/sonarqube.tpl:/input/sonarqube.tpl \
                 -v ${PWD}/trivy-output:/output aquasec/trivy \
                 image --exit-code 1 --no-progress \
-                --format template --template "@/input/custom.tpl" \
+                --format template --template "@/input/sonarqube.tpl" \
                 -o /output/report.json \
                 mendhak/http-https-echo:15
 ```

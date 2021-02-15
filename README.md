@@ -42,7 +42,7 @@ Finally, **send the generated report.json** to Sonarqube using Sonar Scanner CLI
 ```
 docker run --rm \
            -e SONAR_HOST_URL=http://host.docker.internal:9000 \
-           -e SONAR_LOGIN=0e66a8b9d4add3e56465debd0dca77fe41159fb8 \
+           -e SONAR_LOGIN=xxxxxxxxxxxxxxxxxxxxxxx \
            -v ${PWD}:/usr/src sonarsource/sonar-scanner-cli \
            -Dsonar.projectKey=test \
            -Dsonar.externalIssuesReportPaths=/usr/src/trivy-output/report.json 
@@ -58,3 +58,5 @@ Go to the Sonarqube test project and look for the vulnerabilities there.
 I can't find a way to add more details in the Generic Issue Import JSON format.  
 
 RuleID is hardcoded to ContainerScanning.  What should it be instead?
+
+I couldn't pick where to put the 'fixed' version in.  

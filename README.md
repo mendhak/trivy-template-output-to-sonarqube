@@ -59,8 +59,12 @@ Go to the Sonarqube test project and look for the vulnerabilities there.
 
 ### Notes
 
-I can't find a way to add more details in the Generic Issue Import JSON format.  
-
 RuleID is hardcoded to ContainerScanning.  What should it be instead?
 
 I couldn't find a good place to put the 'fixed' version in.  The message field is already crowded. 
+
+I can't find a way to add more details in the Generic Issue Import JSON format.  See:
+
+![no details](screenshot2.png)
+
+I've also posted [on the Sonarsource Community forum](https://community.sonarsource.com/t/how-can-i-fill-up-the-bottom-details-panel-when-importing-issues-using-the-generic-issue-import-format/38627).  

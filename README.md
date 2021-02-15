@@ -12,12 +12,14 @@ Do the first time setup in Sonarqube - reset your admin password, create a proje
 
 Create a normal Trivy HTML output:
 
+```
 docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
                 -v ${PWD}/trivy-cache/:/root/.cache/ \
                 -v ${PWD}/trivy-output:/output \
                 aquasec/trivy image --exit-code 1 --no-progress \
                 --format template --template "@contrib/html.tpl" -o /output/report.html \
                 mendhak/http-https-echo:15
+```
 
 
 Now create a custom Trivy JSON output, using the custom.tpl as a template:

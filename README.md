@@ -1,8 +1,6 @@
-### What is this
+A [custom template](sonarqube.tpl) that Trivy can use, to generate a Sonarqube friendly output.  It is based on the [Sonarqube Generic Issue Import Format](https://docs.sonarqube.org/latest/analysis/generic-issue/). 
 
-A [custom template](sonarqube.tpl) that Trivy can use, to generate a Sonarqube friendly output.  It uses [Sonarqube Generic Issue Import Format](https://docs.sonarqube.org/latest/analysis/generic-issue/). 
-
-### Instructions
+## Instructions
 
 Start the Sonarqube server locally.
 

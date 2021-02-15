@@ -10,7 +10,7 @@ Start the Sonarqube server locally.
 
 Do the first time setup in Sonarqube - reset your admin password, create a project called test, generate a key for that project. 
 
-Create a **normal Trivy HTML output**:
+### Create a normal Trivy HTML output
 
 ```
 docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
@@ -20,9 +20,11 @@ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
                 --format template --template "@contrib/html.tpl" -o /output/report.html \
                 mendhak/http-https-echo:15
 ```
-A `report.html` appears in trivy-output.  
+A `report.html` appears in trivy-output.  You can use this for comparison purposes. 
 
-Now create a **custom Sonarqube JSON output**, using the custom.tpl as a template:
+### Create a custom Sonarqube JSON output
+
+This step will use the custom.tpl as a template:
 
 ```
 docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
@@ -37,7 +39,9 @@ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
 
 A `report.json` appears in trivy-output. 
 
-Finally, **send the generated report.json** to Sonarqube using Sonar Scanner CLI:
+### Send the generated report to Sonarqube
+
+Finally you can send the generated report.json to Sonarqube using Sonar Scanner CLI.  Substitute the SONAR_LOGIN value below with your project's token.  
 
 ```
 docker run --rm \

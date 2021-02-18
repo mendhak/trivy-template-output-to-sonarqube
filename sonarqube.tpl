@@ -28,7 +28,7 @@
                   {{- end }},
       "type": "VULNERABILITY",
       "primaryLocation": {
-        "message": "{{ .PkgName }} - {{ .VulnerabilityID }} - {{ .Title | printf "%q" }}",
+        "message": "{{ .PkgName }} - {{ .VulnerabilityID }} - {{ .Title }}",
         "filePath": "Dockerfile"
       }
     }

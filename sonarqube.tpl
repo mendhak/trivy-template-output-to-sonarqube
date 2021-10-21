@@ -2,8 +2,8 @@
 {
   "issues": [
   {{- $t_first := true }}
-  {{- range . }}
-  {{- $target := .Target }}
+  {{- range $result := . }}
+    {{- $vulnerabilityType := .Type }}
     {{- range .Vulnerabilities -}}
     {{- if $t_first -}}
       {{- $t_first = false -}}
@@ -12,7 +12,7 @@
     {{- end }}
     {
       "engineId": "TRIVY",
-      "ruleId": "ContainerScanning",
+      "ruleId": "{{$vulnerabilityType}}",
       "severity": {{ if eq .Severity "UNKNOWN" -}}
                     "INFO"
                   {{- else if eq .Severity "LOW" -}}
@@ -29,10 +29,10 @@
       "type": "VULNERABILITY",
       "primaryLocation": {
         "message": "{{ .PkgName }} - {{ .VulnerabilityID }} - {{ .Title }}",
-        "filePath": "Dockerfile"
+        "filePath": "{{ $result.Target }}"
       }
     }
-    
+
     {{- end -}}
   {{- end }}
   ]
